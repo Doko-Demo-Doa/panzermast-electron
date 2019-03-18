@@ -42,10 +42,6 @@
     "vue-cli-plugin-electron-builder": "^1.1.3",
     "vue-template-compiler": "^2.6.9"
   },
-  "build": {
-    "appId": "com.clipsub.panzermast",
-    "productName": "Panzermast"
-  },
   "gitHooks": {
     "pre-commit": "lint-staged"
   },

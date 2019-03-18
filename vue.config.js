@@ -1,3 +1,12 @@
 module.exports = {
-  lintOnSave: false
+  lintOnSave: false,
+  pluginOptions: {
+    electronBuilder: {
+      builderOptions: {
+        // Electron Builder options here...
+        appId: "com.clipsub.panzermast",
+        productName: "Panzermast"
+      }
+    }
+  }
 };
