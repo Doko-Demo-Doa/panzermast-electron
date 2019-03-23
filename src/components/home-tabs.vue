@@ -1,12 +1,16 @@
 <template>
   <div class="home-tabs">
     <Tabs>
-      <TabPane label="客様の依頼情報" icon="logo-apple"
-        >Thông tin chung</TabPane
+      <TabPane label="客様の依頼情報" class="tab-content" icon="logo-apple">
+        <GeneralInfo />
+      </TabPane>
+      <TabPane label="設計情報" class="tab-content" icon="logo-windows"
+        >Thiết kế</TabPane
       >
-      <TabPane label="設計情報" icon="logo-windows">Thiết kế</TabPane>
-      <TabPane label="取付物の諸元" icon="logo-tux">Vật đính kèm</TabPane>
-      <TabPane label="ケーブルの諸元" icon="md-albums"
+      <TabPane label="取付物の諸元" class="tab-content" icon="logo-tux"
+        >Vật đính kèm</TabPane
+      >
+      <TabPane label="ケーブルの諸元" class="tab-content" icon="md-albums"
         >Tải trọng dây dọc</TabPane
       >
       <TabPane label="マストに沿った等分布荷重" icon="ios-analytics"
@@ -15,16 +19,58 @@
     </Tabs>
 
     <div class="error-tree">
-      aaa
+      <Tree :data="data1"></Tree>
+      <div class="tree-padding" />
     </div>
   </div>
 </template>
 
 <script>
+import GeneralInfo from "@/components/home/general-info";
+
 export default {
   name: "HomeTabs",
   props: {
     msg: String
+  },
+  components: {
+    GeneralInfo
+  },
+  data() {
+    return {
+      data1: [
+        {
+          title: "parent 1",
+          expand: true,
+          children: [
+            {
+              title: "parent 1-1",
+              expand: true,
+              children: [
+                {
+                  title: "leaf 1-1-1"
+                },
+                {
+                  title: "leaf 1-1-2"
+                }
+              ]
+            },
+            {
+              title: "parent 1-2",
+              expand: true,
+              children: [
+                {
+                  title: "leaf 1-2-1"
+                },
+                {
+                  title: "leaf 1-2-1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    };
   }
 };
 </script>
@@ -37,9 +83,23 @@ export default {
   justify-content: space-between;
   height: 100%;
 
+  .tab-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .error-tree {
-    height: 240px;
-    background-color: $color-green;
+    height: 180px;
+    padding: 14px 20px;
+    overflow-y: scroll;
+    width: 40%;
+    margin-right: auto;
+    border-top: 1px solid gainsboro;
+
+    .tree-padding {
+      width: 60%;
+    }
   }
 }
 </style>
