@@ -76,17 +76,15 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss">
 .home-tabs {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 
-  .tab-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .ivu-tabs {
+    flex-grow: 2;
   }
 
   .error-tree {

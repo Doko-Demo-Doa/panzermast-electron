@@ -7,8 +7,12 @@
       <FormItem label="Title name">
         <Input v-model="formRight.input2" />
       </FormItem>
-      <FormItem label="Aligned title">
-        <Input v-model="formRight.input3" />
+      <FormItem label="Select">
+        <Select v-model="formItem.select">
+          <Option value="beijing">New York</Option>
+          <Option value="shanghai">London</Option>
+          <Option value="shenzhen">Sydney</Option>
+        </Select>
       </FormItem>
     </Form>
   </div>
@@ -24,6 +28,9 @@ export default {
         input1: "",
         input2: "",
         input3: ""
+      },
+      formItem: {
+        select: "beijing"
       }
     };
   }
@@ -33,5 +40,6 @@ export default {
 .general-info {
   height: 100%;
   width: 640px;
+  overflow-y: visible;
 }
 </style>
