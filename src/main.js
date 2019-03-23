@@ -2,11 +2,11 @@ import Vue from "vue";
 import App from "./app.vue";
 import router from "./router";
 import store from "./store";
+import iView from "iview";
 
-import Antd from "ant-design-vue";
-import "ant-design-vue/dist/antd.css";
+import "iview/dist/styles/iview.css";
 
-Vue.use(Antd);
+Vue.use(iView);
 
 Vue.config.productionTip = false;
 

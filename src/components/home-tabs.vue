@@ -1,0 +1,36 @@
+<template>
+  <div class="home-tabs">
+    <Tabs>
+      <TabPane label="macOS" icon="logo-apple">标签一的内容</TabPane>
+      <TabPane label="Windows" icon="logo-windows">标签二的内容</TabPane>
+      <TabPane label="Linux" icon="logo-tux">标签三的内容</TabPane>
+    </Tabs>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "HomeTabs",
+  props: {
+    msg: String
+  }
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+</style>
