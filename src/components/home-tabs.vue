@@ -1,10 +1,22 @@
 <template>
   <div class="home-tabs">
     <Tabs>
-      <TabPane label="macOS" icon="logo-apple">标签一的内容</TabPane>
-      <TabPane label="Windows" icon="logo-windows">标签二的内容</TabPane>
-      <TabPane label="Linux" icon="logo-tux">标签三的内容</TabPane>
+      <TabPane label="客様の依頼情報" icon="logo-apple"
+        >Thông tin chung</TabPane
+      >
+      <TabPane label="設計情報" icon="logo-windows">Thiết kế</TabPane>
+      <TabPane label="取付物の諸元" icon="logo-tux">Vật đính kèm</TabPane>
+      <TabPane label="ケーブルの諸元" icon="md-albums"
+        >Tải trọng dây dọc</TabPane
+      >
+      <TabPane label="マストに沿った等分布荷重" icon="ios-analytics"
+        >Tải trọng dây dọc</TabPane
+      >
     </Tabs>
+
+    <div class="error-tree">
+      aaa
+    </div>
   </div>
 </template>
 
