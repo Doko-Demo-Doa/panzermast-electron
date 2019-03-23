@@ -5,6 +5,7 @@ import store from "./store";
 import iView from "iview";
 
 import "iview/dist/styles/iview.css";
+import "./styles/colors.scss";
 
 Vue.use(iView);
 
