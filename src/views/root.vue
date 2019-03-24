@@ -45,6 +45,8 @@ export default {
 
 <style scoped lang="scss">
 .root {
+  height: 100%;
+
   .nav-text {
     user-select: none;
   }

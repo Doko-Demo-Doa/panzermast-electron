@@ -7,15 +7,46 @@
 
     <div class="top-space">
       <Button
+        @click="drawerVisibility = true"
         size="large"
         type="primary"
         shape="circle"
         icon="ios-menu"
       ></Button>
     </div>
+
+    <Drawer
+      placement="left"
+      title="Basic Drawer"
+      :closable="false"
+      v-model="drawerVisibility"
+    >
+      <p>Some contents...</p>
+      <p>Some contents...</p>
+      <p>Some contents...</p>
+    </Drawer>
     <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    openNotice() {
+      this.$Notice.info({
+        title: "Notification title",
+        desc:
+          "Here is the notification description. Here is the notification description. "
+      });
+    }
+  },
+  data() {
+    return {
+      drawerVisibility: false
+    };
+  }
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -26,10 +57,11 @@
   color: #2c3e50;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 
   .top-space {
     display: flex;
-    padding: 14px 22px;
+    padding: 10px 22px;
   }
 }
 #nav {

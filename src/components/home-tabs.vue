@@ -18,10 +18,10 @@
       >
     </Tabs>
 
-    <!-- <div class="error-tree">
+    <div class="error-tree">
       <Tree :data="data1"></Tree>
       <div class="tree-padding" />
-    </div> -->
+    </div>
   </section>
 </template>
 
@@ -81,17 +81,20 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+
   .p-tab-content {
     padding-top: 42px;
+    flex-grow: 2;
   }
 
   .error-tree {
     height: 100px;
     padding: 14px 20px;
-    overflow-y: scroll;
     width: 100%;
+    height: 100px;
     user-select: none;
+    display: flex;
+    overflow-y: scroll;
     margin-right: auto;
     border-top: 1px solid gainsboro;
 
