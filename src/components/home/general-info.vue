@@ -7,18 +7,18 @@
       :label-width="100"
     >
       <div class="column1">
-        <FormItem label="Title">
+        <FormItem label="計算書No.">
           <Input v-model="formRight.input1" />
         </FormItem>
-        <FormItem label="Title name">
+        <FormItem label="作成者">
           <Input v-model="formRight.input2" />
         </FormItem>
-        <FormItem label="Select">
+        <FormItem label="形式・マスト形状">
           <div class="horizontal">
             <Select v-model="selectLeft.select" class="select-left">
-              <Option value="beijing">New York</Option>
-              <Option value="shanghai">London</Option>
-              <Option value="shenzhen">Sydney</Option>
+              <Option value="beijing">1形マスト</Option>
+              <Option value="shanghai">2形マスト</Option>
+              <Option value="shenzhen">3形マスト</Option>
             </Select>
 
             <Select v-model="selectRight.select">
@@ -28,7 +28,7 @@
           </div>
         </FormItem>
 
-        <FormItem label="Radio">
+        <FormItem label="">
           <RadioGroup v-model="formRight.radio">
             <Radio label="pmb">PM-B</Radio>
             <Radio label="pmc">PM-C</Radio>
@@ -36,25 +36,28 @@
           </RadioGroup>
         </FormItem>
 
-        <FormItem label="Select">
+        <FormItem label="用途">
           <Select v-model="selectLeft.select" class="select-left">
-            <Option value="beijing">New York</Option>
-            <Option value="shanghai">London</Option>
+            <Option value="beijing">その他</Option>
+            <Option value="shanghai">アンテナ柱</Option>
           </Select>
         </FormItem>
       </div>
 
       <div class="column2">
-        <FormItem label="Title">
+        <FormItem label="宛名">
           <Input :maxlength="24" v-model="formRight.input1" />
         </FormItem>
-        <FormItem label="Title">
+        <FormItem label="物件名">
           <Input v-model="formRight.input1" />
         </FormItem>
-        <FormItem label="Title">
+        <FormItem label="マスト柱脚部">
           <Input v-model="formRight.input1" />
         </FormItem>
-        <FormItem label="Date Picker">
+        <FormItem label="地上高さ">
+          <Input v-model="formRight.input1" />
+        </FormItem>
+        <FormItem label="作成日">
           <DatePicker
             style="width: 100%;"
             type="date"
@@ -94,11 +97,15 @@ export default {
   overflow-y: visible;
 
   .column1 {
-    width: 46%;
+    width: 48%;
+
+    .ivu-form-item {
+      white-space: nowrap;
+    }
   }
 
   .column2 {
-    width: 50%;
+    width: 48%;
     padding-right: 63px;
   }
 
