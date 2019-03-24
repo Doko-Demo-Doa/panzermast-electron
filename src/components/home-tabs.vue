@@ -1,6 +1,6 @@
 <template>
-  <div class="home-tabs">
-    <Tabs>
+  <section class="home-tabs">
+    <Tabs type="card" class="p-tab-content">
       <TabPane label="客様の依頼情報" class="tab-content" icon="logo-apple">
         <GeneralInfo />
       </TabPane>
@@ -18,11 +18,11 @@
       >
     </Tabs>
 
-    <div class="error-tree">
+    <!-- <div class="error-tree">
       <Tree :data="data1"></Tree>
       <div class="tree-padding" />
-    </div>
-  </div>
+    </div> -->
+  </section>
 </template>
 
 <script>
@@ -82,16 +82,16 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-
-  .ivu-tabs {
-    flex-grow: 2;
+  .p-tab-content {
+    padding-top: 42px;
   }
 
   .error-tree {
-    height: 180px;
+    height: 100px;
     padding: 14px 20px;
     overflow-y: scroll;
-    width: 40%;
+    width: 100%;
+    user-select: none;
     margin-right: auto;
     border-top: 1px solid gainsboro;
 

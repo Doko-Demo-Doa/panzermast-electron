@@ -4,6 +4,15 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div> -->
+
+    <div class="top-space">
+      <Button
+        size="large"
+        type="primary"
+        shape="circle"
+        icon="ios-menu"
+      ></Button>
+    </div>
     <router-view />
   </div>
 </template>
@@ -17,6 +26,11 @@
   color: #2c3e50;
   height: 100vh;
   width: 100vw;
+
+  .top-space {
+    display: flex;
+    padding: 14px 22px;
+  }
 }
 #nav {
   padding: 30px;
