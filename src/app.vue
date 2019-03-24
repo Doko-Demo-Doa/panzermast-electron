@@ -17,20 +17,23 @@
 
     <Drawer
       placement="left"
-      title="Basic Drawer"
+      title="Panzermast"
       :closable="false"
       v-model="drawerVisibility"
     >
-      <p>Some contents...</p>
-      <p>Some contents...</p>
-      <p>Some contents...</p>
+      <drawer-content></drawer-content>
     </Drawer>
     <router-view />
   </div>
 </template>
 
 <script>
+import DrawerContent from "@/components/drawer/drawer-content.vue";
+
 export default {
+  components: {
+    DrawerContent
+  },
   methods: {
     openNotice() {
       this.$Notice.info({

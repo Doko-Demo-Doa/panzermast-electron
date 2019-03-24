@@ -15,8 +15,11 @@
   "main": "background.js",
   "dependencies": {
     "date-fns": "^1.30.1",
+    "docx-templates": "^3.0.0",
+    "docxtemplater": "^3.9.9",
     "i18next": "^15.0.7",
     "iview": "^3.3.3",
+    "jszip": "2",
     "lodash": "^4.17.11",
     "simplebar-vue": "^0.1.5",
     "vue": "^2.6.10",
@@ -43,6 +46,8 @@
     "node-sass": "^4.11.0",
     "sass": "^1.17.3",
     "sass-loader": "^7.1.0",
+    "storyboard": "^3.1.4",
+    "storyboard-listener-console": "^3.1.4",
     "vue-cli-plugin-electron-builder": "^1.2.0",
     "vue-template-compiler": "^2.6.10"
   },

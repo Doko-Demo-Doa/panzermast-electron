@@ -4,9 +4,9 @@
       <TabPane label="客様の依頼情報" class="tab-content" icon="logo-apple">
         <GeneralInfo />
       </TabPane>
-      <TabPane label="設計情報" class="tab-content" icon="logo-windows"
-        >Thiết kế</TabPane
-      >
+      <TabPane label="設計情報" class="tab-content" icon="logo-windows">
+        <Designing />
+      </TabPane>
       <TabPane label="取付物の諸元" class="tab-content" icon="logo-tux"
         >Vật đính kèm</TabPane
       >
@@ -27,6 +27,7 @@
 
 <script>
 import GeneralInfo from "@/components/home/general-info";
+import Designing from "@/components/home/designing";
 
 export default {
   name: "HomeTabs",
@@ -34,7 +35,8 @@ export default {
     msg: String
   },
   components: {
-    GeneralInfo
+    GeneralInfo,
+    Designing
   },
   data() {
     return {
@@ -91,7 +93,7 @@ export default {
     height: 100px;
     padding: 14px 20px;
     width: 100%;
-    height: 100px;
+    height: 124px;
     user-select: none;
     display: flex;
     overflow-y: scroll;
