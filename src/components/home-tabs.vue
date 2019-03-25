@@ -7,9 +7,9 @@
       <TabPane label="設計情報" class="tab-content" icon="logo-windows">
         <Designing />
       </TabPane>
-      <TabPane label="取付物の諸元" class="tab-content" icon="logo-tux"
-        >Vật đính kèm</TabPane
-      >
+      <TabPane label="取付物の諸元" class="tab-content" icon="logo-tux">
+        <TableData />
+      </TabPane>
       <TabPane label="ケーブルの諸元" class="tab-content" icon="md-albums"
         >Tải trọng dây dọc</TabPane
       >
@@ -28,6 +28,7 @@
 <script>
 import GeneralInfo from "@/components/home/general-info";
 import Designing from "@/components/home/designing";
+import TableData from "@/components/home/table";
 
 export default {
   name: "HomeTabs",
@@ -36,7 +37,8 @@ export default {
   },
   components: {
     GeneralInfo,
-    Designing
+    Designing,
+    TableData
   },
   data() {
     return {
