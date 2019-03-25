@@ -7,7 +7,7 @@
       :label-width="100"
     >
       <div class="column1">
-        <FormItem label="計算書No.">
+        <FormItem error="" label="計算書No.">
           <Input v-model="formRight.input1" />
         </FormItem>
         <FormItem label="作成者">

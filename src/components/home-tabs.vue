@@ -2,7 +2,7 @@
   <section class="home-tabs">
     <Tabs type="card" class="p-tab-content">
       <TabPane label="客様の依頼情報" class="tab-content" icon="logo-apple">
-        <GeneralInfo />
+        <general-info />
       </TabPane>
       <TabPane label="設計情報" class="tab-content" icon="logo-windows">
         <Designing />
