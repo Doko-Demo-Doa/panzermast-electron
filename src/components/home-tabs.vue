@@ -19,6 +19,7 @@
     </Tabs>
 
     <div class="error-tree">
+      <div class="toggler"><Icon type="md-arrow-dropdown" /></div>
       <Tree :data="data1"></Tree>
       <div class="tree-padding" />
     </div>
@@ -92,8 +93,11 @@ export default {
   }
 
   .error-tree {
-    height: 100px;
-    padding: 14px 20px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    bottom: 0;
     width: 100%;
     height: 124px;
     user-select: none;
@@ -101,6 +105,24 @@ export default {
     overflow-y: scroll;
     margin-right: auto;
     border-top: 1px solid gainsboro;
+
+    .toggler {
+      border-bottom: 1px solid gainsboro;
+      background-color: white;
+      opacity: 0.85;
+      position: fixed;
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s all linear;
+
+      &:hover {
+        background-color: $color-pale-grey;
+      }
+    }
+
+    .ivu-tree {
+      margin-top: 21px;
+    }
 
     .tree-padding {
       width: 60%;
