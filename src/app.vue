@@ -1,10 +1,5 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
-
     <div class="top-space">
       <Button
         @click="drawerVisibility = true"
@@ -29,6 +24,9 @@
 
 <script>
 import DrawerContent from "@/components/drawer/drawer-content.vue";
+
+// <router-link to="/">Home</router-link> |
+// <router-link to="/about">About</router-link>
 
 export default {
   components: {

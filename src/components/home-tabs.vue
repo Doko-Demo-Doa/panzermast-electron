@@ -18,8 +18,12 @@
       >
     </Tabs>
 
-    <div class="error-tree">
-      <div class="toggler"><Icon type="md-arrow-dropdown" /></div>
+    <div
+      v-bind:class="{ 'error-tree-collapsed': collapsed, 'error-tree': true }"
+    >
+      <div v-on:click="collapsed = !collapsed" class="toggler">
+        <Icon :type="!collapsed ? 'md-arrow-dropdown' : 'md-arrow-dropup'" />
+      </div>
       <Tree :data="data1"></Tree>
       <div class="tree-padding" />
     </div>
@@ -36,6 +40,9 @@ export default {
   props: {
     msg: String
   },
+  methods: {
+    switchTree: () => alert(6)
+  },
   components: {
     GeneralInfo,
     Designing,
@@ -43,6 +50,7 @@ export default {
   },
   data() {
     return {
+      collapsed: false,
       data1: [
         {
           title: "parent 1",
@@ -93,6 +101,7 @@ export default {
   }
 
   .error-tree {
+    transition: 0.4 all linear;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -105,6 +114,11 @@ export default {
     overflow-y: scroll;
     margin-right: auto;
     border-top: 1px solid gainsboro;
+
+    &.error-tree-collapsed {
+      height: 20px;
+      transition: 0.4 all linear;
+    }
 
     .toggler {
       border-bottom: 1px solid gainsboro;
@@ -122,6 +136,7 @@ export default {
 
     .ivu-tree {
       margin-top: 21px;
+      transition: 0.4 all linear;
     }
 
     .tree-padding {
