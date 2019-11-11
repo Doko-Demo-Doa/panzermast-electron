@@ -21,7 +21,7 @@
               <Option value="shenzhen">3形マスト</Option>
             </Select>
 
-            <Select v-model="selectRight.select">
+            <Select placement="top-end" v-model="selectRight.select">
               <Option value="beijing">New York</Option>
               <Option value="shanghai">London</Option>
             </Select>
@@ -36,7 +36,7 @@
           </RadioGroup>
         </FormItem>
 
-        <FormItem label="用途">
+        <FormItem placement="top-end" label="用途">
           <Select v-model="selectLeft.select" class="select-left">
             <Option value="beijing">その他</Option>
             <Option value="shanghai">アンテナ柱</Option>
