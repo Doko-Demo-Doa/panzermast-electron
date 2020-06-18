@@ -6,7 +6,9 @@ module.exports = {
         // Electron Builder options here...
         appId: "com.clipsub.panzermast",
         productName: "Panzermast"
-      }
+      },
+      disableMainProcessTypescript: false,
+      mainProcessTypeChecking: false
     }
   },
   css: {
